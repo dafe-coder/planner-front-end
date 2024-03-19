@@ -37,12 +37,14 @@ export const Auth: FC = () => {
 	})
 
 	const onSubmit: SubmitHandler<IAuthForm> = data => {
+		console.log(data)
 		mutate(data)
 	}
 
 	return (
 		<div className="flex min-h-screen">
 			<form
+				method="POST"
 				className="w-1/4 m-auto shadow bg-sidebar rounded-xl p-layout"
 				onSubmit={handleSubmit(onSubmit)}
 			>
@@ -71,8 +73,18 @@ export const Auth: FC = () => {
 				/>
 
 				<div className="flex items-center gap-5 justify-center">
-					<Button onClick={() => setIsLoginForm(true)}>Login</Button>
-					<Button onClick={() => setIsLoginForm(false)}>Register</Button>
+					<Button
+						type="submit"
+						onClick={() => setIsLoginForm(true)}
+					>
+						Login
+					</Button>
+					<Button
+						type="submit"
+						onClick={() => setIsLoginForm(false)}
+					>
+						Register
+					</Button>
 				</div>
 			</form>
 		</div>

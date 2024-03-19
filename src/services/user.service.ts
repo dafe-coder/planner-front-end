@@ -11,18 +11,17 @@ export interface IProfileResponse {
 }
 
 class UserService {
-	BASE_URL = '/user/profile'
+	private BASE_URL = '/user/profile'
 
 	async getProfile() {
+		console.log(1)
+
 		const response = await axiosWithAuth.get<IProfileResponse>(this.BASE_URL)
 		return response.data
 	}
 
-	async updateProfile(data: TypeUserForm) {
-		const response = await axiosWithAuth.put<IProfileResponse>(
-			this.BASE_URL,
-			data
-		)
+	async update(data: TypeUserForm) {
+		const response = await axiosWithAuth.put(this.BASE_URL, data)
 		return response.data
 	}
 }
