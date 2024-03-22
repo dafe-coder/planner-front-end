@@ -9,4 +9,4 @@ class DASHBOARD {
 	SETTINGS = `${this.root}/settings`
 }
 
-export const DASHBOARD_PAGE = new DASHBOARD()
+export const DASHBOARD_PAGES = new DASHBOARD()

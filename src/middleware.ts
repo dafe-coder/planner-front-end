@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-import { DASHBOARD_PAGE } from './config/pages-url.config'
+import { DASHBOARD_PAGES } from './config/pages-url.config'
 import { EnumTokens } from './services/auth-token.service'
 
 export async function middleware(request: NextRequest, response: NextResponse) {
@@ -11,7 +11,7 @@ export async function middleware(request: NextRequest, response: NextResponse) {
 	const isAuthPage = url.includes('/auth')
 
 	if (isAuthPage && refreshToken) {
-		return NextResponse.redirect(new URL(DASHBOARD_PAGE.HOME, url))
+		return NextResponse.redirect(new URL(DASHBOARD_PAGES.HOME, url))
 	}
 
 	if (isAuthPage) {

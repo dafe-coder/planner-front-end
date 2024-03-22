@@ -12,7 +12,7 @@ import { Field } from '@/components/ui/fields/Field'
 
 import { IAuthForm } from '@/types/auth.types'
 
-import { DASHBOARD_PAGE } from '@/config/pages-url.config'
+import { DASHBOARD_PAGES } from '@/config/pages-url.config'
 
 import { AuthService } from '@/services/auth.services'
 
@@ -32,7 +32,7 @@ export const Auth: FC = () => {
 		onSuccess: () => {
 			toast.success('Successfully login!')
 			reset()
-			push(DASHBOARD_PAGE.HOME)
+			push(DASHBOARD_PAGES.HOME)
 		},
 	})
 

@@ -3,7 +3,7 @@ import {
 	KanbanSquare,
 	LayoutDashboard,
 	Settings,
-	Timer
+	Timer,
 } from 'lucide-react'
 
 import { DASHBOARD_PAGES } from '@/config/pages-url.config'
@@ -14,26 +14,26 @@ export const MENU: IMenuItem[] = [
 	{
 		icon: LayoutDashboard,
 		link: DASHBOARD_PAGES.HOME,
-		name: 'Dashboard'
+		name: 'Dashboard',
 	},
 	{
 		icon: KanbanSquare,
 		link: DASHBOARD_PAGES.TASKS,
-		name: 'Tasks'
+		name: 'Tasks',
 	},
 	{
 		icon: Timer,
 		link: DASHBOARD_PAGES.TIMER,
-		name: 'Pomodoro'
+		name: 'Pomodoro',
 	},
 	{
 		icon: CalendarRange,
 		link: DASHBOARD_PAGES.TIME_BLOCKING,
-		name: 'Time blocking'
+		name: 'Time blocking',
 	},
 	{
 		icon: Settings,
 		link: DASHBOARD_PAGES.SETTINGS,
-		name: 'Settings'
-	}
+		name: 'Settings',
+	},
 ]
