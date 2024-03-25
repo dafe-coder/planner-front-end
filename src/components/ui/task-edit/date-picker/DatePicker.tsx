@@ -22,7 +22,7 @@ interface IDatePicker {
 export function DatePicker({
 	onChange,
 	value,
-	position = 'right'
+	position = 'right',
 }: IDatePicker) {
 	const [selected, setSelected] = useState<Date>()
 	const { isShow, setIsShow, ref } = useOutside(false)
@@ -41,7 +41,7 @@ export function DatePicker({
 
 	return (
 		<div
-			className='relative'
+			className="relative"
 			ref={ref}
 		>
 			<button onClick={() => setIsShow(!isShow)}>
@@ -49,7 +49,7 @@ export function DatePicker({
 			</button>
 			{value && (
 				<button
-					className='absolute -top-2 -right-4 opacity-30 hover:opacity-100 transition-opacity'
+					className="absolute -top-2 -right-4 opacity-30 hover:opacity-100 transition-opacity"
 					onClick={() => onChange('')}
 				>
 					<X size={14} />
@@ -62,14 +62,14 @@ export function DatePicker({
 						position === 'left' ? '-left-4' : ' -right-4'
 					)}
 					style={{
-						top: 'calc(100% + .7rem)'
+						top: 'calc(100% + .7rem)',
 					}}
 				>
 					<DayPicker
 						fromYear={2023}
 						toYear={2054}
 						initialFocus={isShow}
-						mode='single'
+						mode="single"
 						defaultMonth={selected}
 						selected={selected}
 						onSelect={handleDaySelect}
