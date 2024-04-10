@@ -13,8 +13,11 @@ export const TimeBlockService = {
 		return response
 	},
 
-	async createTimeBlock() {
-		const response = await axiosWithAuth.post<ITimeBlockResponse>(BASE_URL)
+	async createTimeBlock(data: TypeTimeBlockFormState) {
+		const response = await axiosWithAuth.post<ITimeBlockResponse>(
+			BASE_URL,
+			data
+		)
 		return response
 	},
 

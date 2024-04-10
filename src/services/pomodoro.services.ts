@@ -1,14 +1,14 @@
 import {
 	IPomodoroRoundResponse,
 	IPomodoroSessionResponse,
-	TypePomodoroSessionState,
+	TypePomodoroRoundState,
 } from '@/types/pomodoro.types'
 
 import { axiosWithAuth } from '@/api/interceptors'
 
 const BASE_URL = '/user/timer'
 
-export const PomodoroServices = {
+export const PomodoroService = {
 	async getTodaySession() {
 		const response = await axiosWithAuth.get<IPomodoroSessionResponse>(
 			`${BASE_URL}/today`
@@ -22,7 +22,7 @@ export const PomodoroServices = {
 		return response
 	},
 
-	async updateSession(id: string, data: TypePomodoroSessionState) {
+	async updateSession(id: string, data: TypePomodoroRoundState) {
 		const response = await axiosWithAuth.put<IPomodoroSessionResponse>(
 			`${BASE_URL}/${id}`,
 			data
@@ -35,7 +35,7 @@ export const PomodoroServices = {
 		return response
 	},
 
-	async updateRoundSession(id: string, data: IPomodoroRoundResponse) {
+	async updateRound(id: string, data: TypePomodoroRoundState) {
 		const response = await axiosWithAuth.put(`${BASE_URL}/round/${id}`, data)
 		return response
 	},
