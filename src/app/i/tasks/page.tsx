@@ -4,7 +4,7 @@ import { NO_INDEX_PAGE } from '@/constants/seo.constants'
 
 import { Heading } from '../../../components/ui/Heading'
 
-import { TasksView } from './tasksView'
+import { TasksView } from './TasksView'
 
 export const metadata: Metadata = {
 	title: 'Tasks',

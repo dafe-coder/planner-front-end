@@ -2,7 +2,7 @@ import { ITaskResponse, TypeTaskFormState } from '@/types/task.types'
 
 import { axiosWithAuth } from '@/api/interceptors'
 
-const BASE_URL = '/user/time-blocks'
+const BASE_URL = '/user/tasks'
 
 export const TaskService = {
 	async getTasks() {

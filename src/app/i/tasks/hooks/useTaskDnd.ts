@@ -17,11 +17,16 @@ export function useTaskDnd() {
 		if (destinationColumnId === 'completed') {
 			updateTask({
 				id: result.draggableId,
-				data: { isCompleted: true },
+				data: {
+					isCompleted: true,
+				},
 			})
+
 			return
 		}
+
 		const newCreatedAt = FILTERS[destinationColumnId].format()
+
 		updateTask({
 			id: result.draggableId,
 			data: {
