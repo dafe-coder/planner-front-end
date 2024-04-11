@@ -9,7 +9,7 @@ import { arrayMove } from '@dnd-kit/sortable'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { Dispatch, SetStateAction } from 'react'
 
-import { ITimeBlockResponse } from '@/types/time-block.types'
+import { ITimeBlockResponse } from '@/types/type-block.types'
 
 import { TimeBlockService } from '@/services/time-block.service'
 
